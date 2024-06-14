@@ -40,3 +40,9 @@ class Attendee:
         """
         cursor.execute(sql, (name, email, phone, event_id, created_at))
         conn.commit()
+
+    @classmethod
+    def fetch_all(cls):
+        sql = "SELECT * FROM attendees"
+        cursor.execute(sql)
+        return cursor.fetchall()

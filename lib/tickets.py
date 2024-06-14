@@ -41,3 +41,7 @@ class Ticket:
         """
         cursor.execute(sql, (type, price, attendee_id, event_id, created_at))
         conn.commit()
+    @classmethod
+    def fetch_all(cls):
+        cursor.execute("SELECT * FROM tickets")
+        return cursor.fetchall()

@@ -42,9 +42,24 @@ def add_ticket():
     Ticket.insert_ticket(type, price, attendee_id, event_id, created_at)
     print(f"Ticket '{type}' added.")
 
+def list_events():
+    events = Event.fetch_all()
+    for event in events:
+        print(event)
+
+def list_attendees():
+    attendees = Attendee.fetch_all()
+    for attendee in attendees:
+        print(attendee)
+
+def list_tickets():
+    tickets = Ticket.fetch_all()
+    for ticket in tickets:
+        print(ticket)
+
 def main():
     parser = argparse.ArgumentParser(description="Manage events, attendees, and tickets.")
-    parser.add_argument('action', choices=['init', 'drop', 'add_event', 'add_attendee', 'add_ticket'], help="Action to perform")
+    parser.add_argument('action', choices=['init', 'drop', 'add_event', 'add_attendee', 'add_ticket', 'list_events', 'list_attendees', 'list_tickets'], help="Action to perform")
 
     args = parser.parse_args()
 
@@ -58,6 +73,12 @@ def main():
         add_attendee()
     elif args.action == 'add_ticket':
         add_ticket()
+    elif args.action == 'list_events':
+        list_events()
+    elif args.action == 'list_attendees':
+        list_attendees()
+    elif args.action == 'list_tickets':
+        list_tickets()
 
 if __name__ == "__main__":
     main()

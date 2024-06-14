@@ -39,3 +39,7 @@ class Event:
         """
         cursor.execute(sql, (name, date, location, description, created_at))
         conn.commit()
+    @classmethod
+    def fetch_all(cls):
+        cursor.execute("SELECT * FROM events")
+        return cursor.fetchall()
