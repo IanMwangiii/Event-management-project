@@ -1,4 +1,4 @@
-from lib.event import Event
+from event import Event
 from attendee import Attendee
 from tickets import Ticket
 
@@ -36,12 +36,4 @@ Ticket.insert_ticket("General Admission", 50.00, 2, 2, "2024-06-12 12:00:00")
 Ticket.insert_ticket("VIP", 100.00, 3, 3, "2024-06-12 12:00:00")
 Ticket.insert_ticket("General Admission", 50.00, 4, 1, "2024-06-12 12:00:00")
 Ticket.insert_ticket("VIP", 100.00, 5, 2, "2024-06-12 12:00:00")
-Ticket.insert_ticket("General Admission", 50.00, 6, 3, "2024-06-12 12:00:00")
-Ticket.insert_ticket("VIP", 100.00, 7, 1, "2024-06-12 12:00:00")
-Ticket.insert_ticket("General Admission", 50.00, 8, 2, "2024-06-12 12:00:00")
-Ticket.insert_ticket("VIP", 100.00, 9, 3, "2024-06-12 12:00:00")
-Ticket.insert_ticket("General Admission", 50.00, 10, 1, "2024-06-12 12:00:00")
-
-# Fetch all tickets (optional)
-# tickets = Ticket.fetch_all()
-# print(tickets)
+Ticket.insert_ticket("General Admission", 50.00, 6, 3, "2024-06-12")

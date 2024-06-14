@@ -1,7 +1,7 @@
 import argparse
 from event import Event
-from lib.attendee import Attendee
-from lib.tickets import Ticket
+from attendee import Attendee
+from tickets import Ticket
 
 def initialize_db():
     Event.create_table()
